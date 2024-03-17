@@ -3,7 +3,8 @@ All EasyMirror services started from a single repository with docker-compose.
 
 ## Building Containers
 ### Building
-- To build all the services together, run `docker-compose up`
+- To build all the services together, run `docker-compose up -d`
+- To shut down all servvices, run `docker-compose down`
 ### Debugging
 - To debug the docker containers, simply run `docker-compose config`
 
