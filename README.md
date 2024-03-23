@@ -69,7 +69,14 @@ All EasyMirror services started from a single repository with docker-compose.
 - All logs will be stored in AWS' CloudWatch
 
 ## Notes
+- This repository is meant to replicate the environment with a load balancer
 - When it comes to SSL & port 443, because we are only accepting traffic form ALB, we do not need to have a nginx.conf file to listen on port 443.
+
+## Other Resources
+- [Route Traffic to Multiple Target Groups using Load Balancer Listener Rules ](https://www.youtube.com/watch?v=0XMsnAgHXoo)
+- [Using ALB with Fargate](https://stackoverflow.com/questions/64096246/can-we-use-one-alb-with-aws-ecs-fargate)
+- [Only Allow Traffic From Load Balancer](https://stackoverflow.com/questions/49227466/aws-instance-only-allow-traffic-from-load-balancer)
+- [Application Load Balancer with ECS Fargate](https://stackoverflow.com/questions/64409699/application-load-balancer-with-ecs-fargate)
 
 ## TODOs
 - [ ] Add cloudformation scripts to make creating services easier
