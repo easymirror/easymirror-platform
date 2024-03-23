@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  web:
+    build: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+      - frontend
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+  
+  api:
+    image: easymirror-platform-api:v1.0.0
+    ports:
+      - "8080:8080"
+    env_file:
+      - backend.env
+  
+  frontend:
+    image: easymirror-platform-frontend:latest
+    ports:
+      - "3000:3000"
+    env_file:
+      - frontend.env
